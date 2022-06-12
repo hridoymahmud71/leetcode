@@ -1,7 +1,6 @@
 
 
-from operator import truediv
-
+# https://leetcode.com/problems/valid-perfect-square/
 
 class Solution:
     def isPerfectSquare(num:int)->bool:
