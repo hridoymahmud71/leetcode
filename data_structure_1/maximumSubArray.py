@@ -21,6 +21,8 @@ class Solution :
         # 1. max subarray of left half
         # 2. max subarray of right half
         # 3. max subarray sum such that the subarray crosses the midpoint
+
+        print(low,mid,high)
         max_sum = max(self.maxSubArraySum(arr,low,mid),self.maxSubArraySum(arr,mid + 1,high),self.maxCrossingSum(arr, low, mid, high))
         #return this largest possible sum of the section recursively
         return max_sum
@@ -47,8 +49,9 @@ class Solution :
         return max(left_sum,right_sum,left_sum + right_sum)
 
 # driver code
-arr = [-2,1,-3,4,-1,2,1,-5,4]
-sol = Solution.maxSubArray(arr)
-print(sol)
+arr = [2, 3, 4, 5, 10]
+solution = Solution()
+result = solution.maxSubArray(arr)
+print(result)
 
 
