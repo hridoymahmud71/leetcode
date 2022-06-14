@@ -25,5 +25,4 @@ class Solution:
 sol = Solution()
 start_time = time.time()
 res = sol.firstBadVersion(17000000000000000000)
-
 print(res,time.time()-start_time)
