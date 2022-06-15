@@ -7,22 +7,40 @@ class Solution:
         end = x
         ans = 0
        
-        while start < end :
-            mid = start + (end - start) // 2
+        # divide and conqure   
+        # while start < end :
+        #     mid = start + (end - start) // 2
             
-            print('start loop')
-            print(start,end,"||",mid,mid*mid)
+        #     print('start loop')
+        #     print(start,end,"||",mid,mid*mid)
             
-            if mid * mid == x :
-                return mid
-            elif mid * mid < x :
-                start = mid + 1
-                ans = start
-            else :
-                end = mid - 1
-                ans = end
-            print(ans)
-            print('end loop\n')
+        #     if mid * mid == x :
+        #         return mid
+        #     elif mid * mid < x :
+        #         start = mid + 1
+        #         ans = start
+        #     else :
+        #         end = mid - 1
+        #         ans = end
+        #     print(ans)
+        #     print('end loop\n')
+
+        # brute force
+        if x > 2:
+            rangeEnd = x
+            for i in(range(1,rangeEnd)):
+                isquare = i * i
+                if isquare == x:
+                    ans = i
+                    break
+                if(isquare > x):
+                    ans = i -1
+                    break
+        elif x == 1 or x == 2:
+            ans = 1
+        else :
+            ans = 0 
+            
                 
         return ans
 
