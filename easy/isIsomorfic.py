@@ -1,8 +1,5 @@
 # https://leetcode.com/problems/isomorphic-strings/
 
-from ast import Not
-from operator import truediv
-
 
 class Solution:
     def isIsomorphic(self, s: str, t: str) -> bool:
@@ -25,9 +22,9 @@ class Solution:
             # foo
            # on oth and 1th iteration the stMap = {f:f,o:ao} tsMap = {f:f,o:o}
 
-            # s[2] here is 'o' and it's already pushed in stMap but stMap[s[2]] / stMap[o] is r 'o->o'
-            # t[2] here is 'o' and it's aalready pushed in tsMap but tsMap[t[2]] / tsMap[r] is o 'o->o'
-            # if it's reversely mapping is should already be in the existing map but it's not. So it's a false case
+            # s[2] here is 'o' and it's already pushed in stMap but stMap[s[2]] / stMap[o] is r 'o->o' which skips this case
+            # t[2] here is 'o' and it's already pushed in tsMap but tsMap[t[2]] / tsMap[r] is o 'o->o' which skips this case
+            # if it's reversely mapping is should already be in the existing map but it's not. So it's a true case
 
             if s[i] in stMap and stMap[s[i]] != t[i]:
                 return False
