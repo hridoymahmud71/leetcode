@@ -20,7 +20,7 @@ class Solution:
             # 012   
             # foo
             # foo
-           # on oth and 1th iteration the stMap = {f:f,o:ao} tsMap = {f:f,o:o}
+            # on oth and 1th iteration the stMap = {f:f,o:ao} tsMap = {f:f,o:o}
 
             # s[2] here is 'o' and it's already pushed in stMap but stMap[s[2]] / stMap[o] is r 'o->o' which skips this case
             # t[2] here is 'o' and it's already pushed in tsMap but tsMap[t[2]] / tsMap[r] is o 'o->o' which skips this case
