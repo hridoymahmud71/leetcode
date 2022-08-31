@@ -17,7 +17,7 @@ class Solution:
             
             return value
             
-        return str_to_int(num1) + str_to_int(num2)
+        return str(str_to_int(num1) + str_to_int(num2)) 
                 
         
         
@@ -27,4 +27,4 @@ num1 = "11"
 num2 = "123"
 sol = Solution()
 res = sol.addStrings(num1,num2)
-print("solution is ",res)
+print("solution is ",res,type(res))
