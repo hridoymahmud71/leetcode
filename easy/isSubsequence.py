@@ -6,14 +6,27 @@ class Solution:
         if s in t:
             return True
 
+        if s == "" or t == "":
+            return False
+
         checker = ""
 
-        for i in range(len(t)):
-            if( t[i] in s and (t[i] not in checker or s[len(checker)] == t[i])):
-                checker += (t[i])
+        # Mobin solution does not work
+        # for i in range(len(t)):
+        #     if( t[i] in s and (t[i] not in checker or s[len(checker)] == t[i])):
+        #         checker += (t[i])
 
         
-        return True if checker == s else False  
+        # return True if checker == s else False  
+
+        # Mehedi solution 
+        for i in range(len(t)):
+            if len(s) > 0 and s[0] == t[i]:
+                
+                s = s[1 : : ] # Slice string to remove first character
+        
+        return len(s) == 0
+            
 
 # driver code
 s = "leeeeetcode"
