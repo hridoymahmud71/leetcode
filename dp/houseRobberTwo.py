@@ -1,6 +1,5 @@
 
 # https://leetcode.com/problems/house-robber-ii/
-from re import A
 from typing import List
 
 
