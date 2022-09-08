@@ -1,4 +1,4 @@
-# https://leetcode.com/problems/powx-n/
+# https://leetcode.com/problems/find-triangular-sum-of-an-array/
 
 from typing import List
 
