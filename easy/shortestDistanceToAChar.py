@@ -16,6 +16,7 @@ class Solution:
                 
         for i in range(len(s)):
             mymin = math.inf
+            # print(math.inf,type(math.inf))
             
             for j,val in enumerate(pos):
                 myabs = abs(val - i)
