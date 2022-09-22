@@ -9,21 +9,14 @@ class TreeNode:
         self.left = left
         self.right = right
 class Solution:
-    def maxDepth(self, root: Optional[TreeNode]) -> int:
-        if root == None:
-            return 0
-
-
-        def dfsTrasverse(current,level):
-            if current == None :
-                return level
-            level += 1
-            
-            return max(dfsTrasverse(current.left,level),dfsTrasverse(current.right,level)) 
-            
-
+    def maxDepth(self, root: Optional[TreeNode],level = 0) -> int:
         
-        return dfsTrasverse(root,0)
+        if root == None :
+            return level
+        level += 1
+        
+        return max(self.maxDepth(root.left,level),self.maxDepth(root.right,level))
+
 
         
 
