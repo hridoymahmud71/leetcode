@@ -6,33 +6,18 @@ from typing import List
 class Solution:
     def minimumTotal(self, triangle: List[List[int]]) -> int:
 
-        pos = 0    
-        sum = 0
-        for i in range(len(triangle)):
+        for i in range(len(triangle) - 2, -1, -1):
+            for j in range(len(triangle[i])):
 
-            if i == 0:
-                sum += triangle[i][pos]
+                minSum = min(triangle[i][j] + triangle[i+1]
+                             [j], triangle[i][j] + triangle[i+1][j+1])
+                triangle[i][j] = minSum
 
-            else:
-                if triangle[i][pos] < triangle[i][pos + 1]:
-                    sum += triangle[i][pos]                
-                else:
-                    sum += triangle[i][pos + 1]
-                    pos += 1
-            
-            print(sum,pos)
-    
-        return sum
-       
+        return triangle[0][0]
 
-
-
-
-
-       
 
 # driver code
-triangle = [[2],[3,4],[6,5,7],[4,1,8,3]]
+triangle = [[2], [3, 4], [6, 5, 7], [4, 1, 8, 3]]
 sol = Solution()
 res = sol.minimumTotal(triangle)
 print("solution is ", res)
