@@ -9,6 +9,8 @@ class Solution:
         m = len(grid) 
         n = len(grid[0])
 
+        hit = 0
+
         # -----start-----
         # recursive way with memo
 
@@ -16,11 +18,14 @@ class Solution:
         # memo = {}
 
         # def dfsTraverse(m, n, memo):
+            
 
         #     memkey = str(m)+"-"+str(n)
 
         #     if memkey in memo.keys():
         #         return memo[memkey]
+
+            
 
         #     if m == 0 and n == 0:
         #         return grid[m][n]
@@ -40,6 +45,7 @@ class Solution:
         dp = [[0] * n for _ in range(m)]
         for r in range(m):
             for c in range(n):
+                
                 if r == 0 and c == 0:
                     dp[r][c] = grid[r][c]
                 elif r > 0 and c > 0:
