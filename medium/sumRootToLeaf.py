@@ -10,8 +10,7 @@ class TreeNode:
         self.right = right
 class Solution:
     def sumNumbers(self, root: Optional[TreeNode]) -> int:
-        
-        
+               
         sum = 0
 
         def dfsTraverse(node,pathVal):
